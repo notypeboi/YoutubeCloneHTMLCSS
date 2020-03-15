@@ -102,16 +102,27 @@ body>.info {
 
 .info .metadata .titleAndButton .title {
     font-size: var(--font-mediux);
+    margin-right: var(--padding);
+}
+
+.info .metadata .titleAndButton .title.clamp {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     overflow: hidden;
-    margin-right: var(--padding);
+
 }
 
 .info .metadata .titleAndButton .moreBtn {
     height: 100%;
 
+    transition: transform 300ms ease-in-out;
+
+}
+
+.info .metadata .titleAndButton .moreBtn.clicked {
+    transform: rotate(180deg);
+    transition: transform 300ms ease-in-out;
 }
 
 .info .view {
@@ -230,6 +241,10 @@ body>.info {
     font-size: var(--font-small);
 }
 
+.infoAndUpNext {
+    display: flex;
+    flex-direction: column;
+}
 
 @media screen and (min-width: 768px) {
     .infoAndUpNext {
