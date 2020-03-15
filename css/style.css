@@ -1,0 +1,239 @@
+@import "header.css";
+@import "videoplayer.css";
+
+:root {
+    /* color */
+    --white-color: #FFFFFF;
+    --black-color: #140a00;
+    --blue-color: #045fd4;
+    --red-color: #ff0000;
+    --grey-dark-color: #909090;
+    --grey-light-color: #e0e0e0;
+    /*size */
+
+    --padding: 12px;
+    --avatar-size: 36px;
+
+
+    /* Font size */
+    --font-large: 18px;
+    --font-mediux: 14px;
+    --font-small: 12px;
+    --font-micro: 10px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: Roboto;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    outline: none;
+    background-color: transparent;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--padding);
+    background-color: var(--black-color);
+    color: var(--white-color);
+}
+
+header .logo {
+    font-size: var(--font-large);
+}
+
+header .logo i {
+    color: var(--red-color);
+}
+
+header .icons .fa-search {
+    margin-right: var(--padding);
+}
+
+
+.player {
+    position: sticky;
+    top: 0;
+    text-align: center;
+    background-color: var(--black-color);
+}
+
+
+.player video {
+    width: 100%;
+    max-width: 1000px;
+    height: 100%;
+}
+
+body>.info {
+    padding: var(--padding);
+}
+
+.info .metadata .hashtags {
+    display: flex;
+    font-size: var(--font-small);
+    color: var(--blue-color);
+}
+
+.info .metadata .hashtags li {
+    margin-right: var(--padding);
+
+}
+
+.info .metadata .titleAndButton {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info .metadata .titleAndButton .title {
+    font-size: var(--font-mediux);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    margin-right: var(--padding);
+}
+
+.info .metadata .titleAndButton .moreBtn {
+    height: 100%;
+
+}
+
+.info .view {
+    font-size: var(--font-small);
+    color: var(--grey-dark-color);
+}
+
+.action {
+    display: flex;
+    justify-content: space-around;
+    margin: var(--padding) 0;
+}
+
+.action button {
+    display: flex;
+    flex-direction: column;
+    font-size: var(--font-small);
+    color: var(--grey-dark-color);
+
+}
+
+.action button i {
+    margin: 0 auto;
+    margin-bottom: calc(var(--padding)/2);
+    font-size: 16px;
+}
+
+.action button i.active {
+    color: var(--blue-color);
+}
+
+.channel {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--grey-light-color);
+    border-bottom: 1px solid var(--grey-light-color);
+    padding: 8px 0;
+
+}
+
+.channel .metadata {
+    display: flex;
+    align-items: center;
+}
+
+.channel .metadata img {
+    width: var(--avatar-size);
+    height: var(--avatar-size);
+    border-radius: 50%;
+    margin-right: 1em;
+}
+
+.channel .metadata .info {
+    display: flex;
+    flex-direction: column;
+}
+
+.channel .metadata .info .title {
+    font-size: var(--font-mediux);
+}
+
+.channel .metadata .info .subscribers {
+    font-size: var(--font-small);
+    color: var(--grey-dark-color);
+}
+
+.channel .subscribe {
+    text-transform: uppercase;
+    color: var(--red-color);
+    font-size: var(--font-mediux);
+}
+
+.UpNext {
+    padding: 0 var(--padding);
+}
+
+.UpNext>.title {
+    font-size: var(--font-mediux);
+    color: var(--grey-dark-color);
+    margin-bottom: calc(var(--padding) / 2);
+}
+
+.UpNext .item {
+    display: flex;
+}
+
+.UpNext .item .img {
+    flex: 1 1 35%;
+}
+
+.UpNext .item .img img {
+    width: 100%;
+}
+
+.UpNext .item .info {
+    flex: 1 1 60%;
+}
+
+.UpNext .item .moreBtn {
+    flex: 1 1 5%;
+}
+
+.UpNext .item .info {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.UpNext .item .info .name {
+    color: var(--grey-dark-color);
+    font-size: var(--font-small);
+}
+
+.UpNext .item .info .views {
+    color: var(--grey-dark-color);
+    font-size: var(--font-small);
+}
+
+
+@media screen and (min-width: 768px) {
+    .infoAndUpNext {
+        flex-direction: row;
+        margin: var(--padding) 0;
+    }
+}
